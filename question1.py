@@ -1,19 +1,14 @@
-"""Laboratorio 8 - Problema 1.
 
-Implementa una CLI que calcule carga por punto de soporte.
-"""
 import sys
 
 try:
-    # Verificar número de argumentos
+    
     if len(sys.argv) != 3:
         raise ValueError
 
-    # Convertir a números
     total_load = float(sys.argv[1])
     num_supports = float(sys.argv[2])
 
-    # Verificar división por cero
     if num_supports == 0:
         print("Error: Cannot divide by zero! Supports must be greater than zero.")
     else:

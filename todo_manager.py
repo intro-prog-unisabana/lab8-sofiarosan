@@ -1,8 +1,7 @@
-"""Laboratorio 8 - Módulo de persistencia para lista de tareas."""
 
 
 def read_todo_file(file_path):
-    """Reads tasks from a file. Returns a list of tasks."""
+    
     try:
         with open(file_path, 'r') as file:
             return file.read().splitlines()
@@ -13,9 +12,7 @@ def read_todo_file(file_path):
 
 
 def write_todo_file(file_path, tasks):
-    """Writes tasks to a file, one per line."""
-    def write_todo_file(file_path, tasks):
-    
-     with open(file_path, 'w') as file:
+
+    with open(file_path, 'w') as file:
         for task in tasks:
             file.write(task + "\n")

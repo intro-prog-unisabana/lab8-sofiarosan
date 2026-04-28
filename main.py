@@ -4,9 +4,7 @@ import sys
 from todo_manager import read_todo_file, write_todo_file
 
 try:
-    # -------------------------------
-    # VALIDACIÓN INICIAL
-    # -------------------------------
+    
     if len(sys.argv) < 2:
         raise IndexError("Insufficient arguments provided!")
 
