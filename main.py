@@ -28,26 +28,22 @@ Examples:
 
     file_path = sys.argv[1]
 
-    # Leer archivo UNA vez
+   
     tasks = read_todo_file(file_path)
 
-    i = 2  # empezar después del file_path
+    i = 2  
 
-    # -------------------------------
-    # PROCESAR COMANDOS
-    # -------------------------------
     while i < len(sys.argv):
 
         command = sys.argv[i]
 
-        # -------- VIEW --------
+        
         if command == "view":
             print("Tasks:")
             for task in tasks:
                 print(task)
             i += 1
 
-        # -------- ADD --------
         elif command == "add":
             if i + 1 >= len(sys.argv):
                 raise IndexError('Task description required for "add".')
@@ -57,7 +53,6 @@ Examples:
             print(f'Task "{task}" added.')
             i += 2
 
-        # -------- REMOVE --------
         elif command == "remove":
             if i + 1 >= len(sys.argv):
                 raise IndexError('Task description required for "remove".')
@@ -72,18 +67,14 @@ Examples:
 
             i += 2
 
-        # -------- ERROR --------
+       
         else:
             raise ValueError("Command not found!")
 
-    # -------------------------------
-    # GUARDAR UNA SOLA VEZ
-    # -------------------------------
+    
     write_todo_file(file_path, tasks)
 
-# -------------------------------
-# MANEJO DE ERRORES
-# -------------------------------
+
 except IndexError as e:
     print(e)
 
